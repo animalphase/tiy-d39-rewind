@@ -1,0 +1,46 @@
+.page-header {
+  border-bottom: .1rem solid $color-light;
+}
+.page-heading {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.post-entry {
+  display: block;
+}
+
+nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  // li {
+  //   display: inline-block;
+  //   flex: 1;
+  //   padding: 0;
+  //   margin: 1rem 0 0 0;
+  // }
+
+  a {
+    display: inline-block;
+    width: 30%;
+    padding: 1rem 1rem .8rem 1rem;
+    border-bottom: .1rem solid;
+    margin-right: 1rem;
+
+    &:active {
+      background: $color-link;
+      color: $color-white;
+      transition: 0 ease all;
+    }
+  }
+}
+
+@media only screen and (min-width: 50rem) {
+  .main-nav {
+    font-size: 1.8rem;
+  }
+}
