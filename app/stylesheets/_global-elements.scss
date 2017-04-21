@@ -1,7 +1,13 @@
+.page-wrapper {
+  position: relative;
+  min-height: 100vh
+}
+
 .page-header {
   padding-top: 1.6rem;
   border-bottom: .3rem solid $color-borders;
 }
+
 .page-heading {
   font-size: 2rem;
   cursor: pointer;

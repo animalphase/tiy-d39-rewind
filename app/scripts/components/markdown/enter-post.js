@@ -34,7 +34,7 @@ class EnterPost extends React.Component {
     return (
       <main className="content-wrapper">
         <div className="post-editor">
-          <h2>New Blog Post</h2>
+          <h2 className="post-editor-heading">New Blog Post</h2>
           <div className="editor-container">
             <section className="post-entry">
               <textarea
@@ -48,6 +48,7 @@ class EnterPost extends React.Component {
                 ref="postInput"
                 placeholder="type post in markdown…"
               />
+              <button type="submit">Submit post</button>
             </section>
             <section className="markdown-preview-section">
               <article

@@ -32,12 +32,7 @@ export default function app() {
               <div className={classNames(location)}>
                 <Header />
                 <Route exact path="/" component={HomeView} />
-                <Route
-                  exact
-                  path="/markdown"
-                  component={EnterPost}
-                  initalValue={store.getState().draft}
-                />
+                <Route exact path="/markdown" component={EnterPost} />
                 <Footer />
               </div>
             );
