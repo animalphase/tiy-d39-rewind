@@ -1,25 +1,26 @@
 html {
   background: #f6e7fc;
   background:
-    radial-gradient(circle, transparent 20%, #fff 20%, #fff 90%, transparent 90%, transparent),
-    radial-gradient(circle, transparent 20%, #c7ffff 20%, #c7ffff 90%, transparent 90%, transparent) -4px -8px,
-    linear-gradient(#FBEEFF 4px, transparent 4px) 0 -2px,
-    linear-gradient(90deg, #FBEEFF 4px, transparent 4px) -2px 0;
-  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
-  background-color: #fefcff;
+    radial-gradient(circle, transparent 20%, $color-background 20%, $color-background 90%, transparent 90%, transparent),
+    radial-gradient(circle, transparent 20%, $color-primary   20%, $color-primary 90%, transparent 90%, transparent) -4px -8px,
+    linear-gradient($color-secondary 4px, transparent 4px) 0 -2px,
+    linear-gradient(90deg, $color-secondary 4px, transparent 4px) -2px 0;
+
+  background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
+  background-color: tint($color-borders, 95%);
 }
 
 .page-wrapper {
-  padding: 2rem;
   position: relative;
   min-height: 100vh
 }
 .post-editor {
   background: $color-white;
   max-width: 120rem;
-  margin: 2rem auto;
+  margin: 0 auto 2rem auto;
   border-radius: 1rem;
   padding: 2rem 2rem 6rem 2rem;
+  @include shadow-box-static;
 }
 
 
@@ -29,6 +30,7 @@ html {
 }
 
 .post-entry {
+  display: block;
   flex: 1;
   margin-right: 1rem;
 }
@@ -44,18 +46,7 @@ html {
   width: 100%;
 }
 
-.page-header {
-  text-align: center;
-}
 
-.page-footer {
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4rem;
-}
 
 @media (min-width: 700px) {
 }

@@ -3,11 +3,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import AppRoot from './components/app_root.js';
-import About from './components/about.js';
-import Contact from './components/contact.js';
+
 import Header from './components/header.js';
 import Footer from './components/footer.js';
+import HomeView from './components/home-view.js';
+import EnterPost from './components/markdown/enter-post.js';
 
 export default function app() {
   function classNames(location) {
@@ -15,7 +15,10 @@ export default function app() {
     if (location.pathname === '/' || location.pathname === '') {
       classes.push('home-view');
     } else {
-      classes.push(location.pathname.slice(1, location.pathname.length));
+      let newClasses = location.pathname
+        .slice(1, location.pathname.length)
+        .split('/');
+      classes.push(...newClasses);
     }
     return classes.join(' ');
   }
@@ -28,12 +31,12 @@ export default function app() {
             return (
               <div className={classNames(location)}>
                 <Header />
+                <Route exact path="/" component={HomeView} />
                 <Route
                   exact
-                  path="/"
-                  component={() => {
-                    return <h1>test</h1>;
-                  }}
+                  path="/markdown"
+                  component={EnterPost}
+                  initalValue={store.getState().draft}
                 />
                 <Footer />
               </div>

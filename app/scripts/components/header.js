@@ -8,18 +8,25 @@ class Header extends React.Component {
     super(props);
   }
 
-  headerClickable({ history }) {
+  headingClickable({ history }) {
     return (
-      <header className="page-header">
-        <h1 className="page-heading" onClick={() => history.push('/')}>
-          combo project
-        </h1>
-      </header>
+      <h1 className="page-heading" onClick={() => history.push('/')}>
+        combo project
+      </h1>
     );
   }
 
   render() {
-    return <Route render={this.headerClickable} />;
+    return (
+      <header className="page-header">
+        <Route render={this.headingClickable} />
+        <nav>
+          <NavLink to="markdown">Markdown</NavLink>
+          <NavLink to="questions">Questions</NavLink>
+          <NavLink to="question-better">Quesiton Better</NavLink>
+        </nav>
+      </header>
+    );
   }
 }
 
