@@ -46,7 +46,7 @@ class Question extends React.Component {
     var maxQuestionNumber = this.props.questionsApp.questions.length;
 
     return (
-      <div>
+      <main className="content-wrapper">
         <Header username={this.props.username} />
         <main className="page-frame">
           <Nav />
@@ -91,7 +91,7 @@ class Question extends React.Component {
             </div>
           </section>
         </main>
-      </div>
+      </main>
     );
   }
 }

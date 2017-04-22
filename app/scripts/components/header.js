@@ -21,9 +21,9 @@ class Header extends React.Component {
       <header className="page-header">
         <Route render={this.headingClickable} />
         <nav>
-          <NavLink to="markdown">Markdown</NavLink>
-          <NavLink to="questions">Questions</NavLink>
-          <NavLink to="question-better">Quesiton Better</NavLink>
+          <NavLink to="/markdown">Markdown</NavLink>
+          <NavLink to="/questions">Questions</NavLink>
+          <NavLink to="/question-better">Quesiton Better</NavLink>
         </nav>
       </header>
     );

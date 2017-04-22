@@ -13,9 +13,9 @@ class QuestionsStart extends React.Component {
   render() {
     console.log('questions!');
     return (
-      <div>
-        <Header username={this.props.username} />
-        <main className="page-frame">
+      <main className="content-wrapper">
+        <Header className="questions-header" username={this.props.username} />
+        <div className="page-frame">
           <Nav />
           <section className="page-content">
             <h2>🙋🏻 Hello!</h2>
@@ -27,8 +27,8 @@ class QuestionsStart extends React.Component {
               Start! 👩🏻‍💻
             </button>
           </section>
-        </main>
-      </div>
+        </div>
+      </main>
     );
   }
 }

@@ -24,6 +24,7 @@ html {
 
 
 .page-wrapper.questions {
+  color: $color-dark;
   background: $color-white;
   background:
     radial-gradient(circle, transparent 20%, $color-background 20%, $color-background 80%, transparent 80%, transparent),
@@ -35,16 +36,115 @@ html {
 
   .page-header {
     background: $color-dark;
-    h1 {
-      color: #ccc;
-    }
+    color: $color-light;
+
     a {
-      color: #aaa;
+      color: $color-light;
     }
   }
 
   .page-footer {
     background: $color-dark;
+  }
+
+  .content-wrapper {
+    padding: 0;
+
+    header {
+      color: $color-dark;
+      background: rgba(255,255,255,.5);
+      padding: 2rem;
+      border-bottom: .1rem solid $color-light;
+      @include clearfix;
+
+      h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 2rem;
+        display: inline-block;
+        vertical-align: middle;
+        height: 2rem;
+        line-height: 2rem;
+      }
+
+      a {
+        color: $color-dark;
+      }
+    }
+
+    .user-profile-link {
+      float: right;
+      vertical-align: middle;
+      height: 2rem;
+      line-height: 2rem;
+    }
+
+    nav {
+      float: left;
+      width: 20rem;
+      padding-right: 4rem;
+      font-size: 1.4rem;
+
+      h3 {
+        margin: 0;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+      }
+
+      li {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 1rem 0 0 0;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        padding: 1rem 1rem .8rem 1rem;
+        margin-left: -1rem;
+        border-bottom: .1rem solid;
+
+        &:active {
+          background: $color-link;
+          color: $color-white;
+          transition: 0 ease all;
+        }
+      }
+    }
+
+    .active {
+      font-weight: bold;
+      background: $color-light;
+    }
+
+    .pagination {
+      display: flex;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: .1rem solid $color-light;
+
+      * {
+        vertical-align: middle;
+      }
+    }
+
+    .pagination-count {
+      display: block;
+      flex: 1;
+      text-align: center;
+      vertical-align: middle;
+      padding: 1.3rem;
+    }
+
+    .page-content {
+      margin-left: 20rem;
+    }
   }
 }
 
