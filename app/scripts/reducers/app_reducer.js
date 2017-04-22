@@ -74,7 +74,7 @@ export default function AppReducer(currentState, action) {
 
     case 'SET_ANSWER':
       let newState = currentState;
-      newState.questions.forEach((question, i, array) => {
+      newState.questionsApp.questions.forEach((question, i, array) => {
         if (question.id == Number(action.answerId)) {
           question.answer = action.answerInput;
         }

@@ -37,7 +37,7 @@ class Question extends React.Component {
         answerId: currentQuestionId,
         answerInput: inputText
       });
-      this.props.history.push('/question/' + (Number(currentQuestionId) + 1));
+      this.props.history.push('/questions/question/' + (Number(currentQuestionId) + 1));
     }
   }
 
