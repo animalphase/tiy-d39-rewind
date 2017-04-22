@@ -9,6 +9,9 @@ import Footer from './components/footer.js';
 import HomeView from './components/home-view.js';
 import EnterPost from './components/markdown/enter-post.js';
 
+import QuestionsStart from './components/questions/questions-start.js';
+import Question from './components/questions/question.js';
+
 export default function app() {
   function classNames(location) {
     let classes = ['page-wrapper'];
@@ -23,6 +26,8 @@ export default function app() {
     return classes.join(' ');
   }
 
+  // <Route exact path="questions/results" component={Results} />
+
   render(
     <Provider store={store}>
       <Router>
@@ -33,6 +38,12 @@ export default function app() {
                 <Header />
                 <Route exact path="/" component={HomeView} />
                 <Route exact path="/markdown" component={EnterPost} />
+                <Route exact path="/questions" component={QuestionsStart} />
+                <Route
+                  exact
+                  path="/questions/question/:questionNumber"
+                  component={Question}
+                />
                 <Footer />
               </div>
             );
