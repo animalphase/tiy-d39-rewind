@@ -29,7 +29,6 @@ class EnterPost extends React.Component {
   }
 
   render() {
-    console.log(this.props.initalValue);
     var marked = require('marked');
     return (
       <main className="content-wrapper">
@@ -44,7 +43,7 @@ class EnterPost extends React.Component {
                 name="post raw text in markdown"
                 rows="1"
                 cols="60"
-                value={this.props.draft}
+                value={this.props.markdownApp.draft}
                 ref="postInput"
                 placeholder="type post in markdown…"
               />
@@ -53,7 +52,9 @@ class EnterPost extends React.Component {
             <section className="markdown-preview-section">
               <article
                 className="markdown-article"
-                dangerouslySetInnerHTML={this.createMarkup(this.props.draft)}
+                dangerouslySetInnerHTML={this.createMarkup(
+                  this.props.markdownApp.draft
+                )}
               />
             </section>
           </div>

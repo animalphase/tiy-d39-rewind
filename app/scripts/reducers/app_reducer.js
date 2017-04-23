@@ -53,8 +53,10 @@ let questionsArray = [
 
 let initialState = {
   username: 'ripley',
-  savedPosts: [],
-  draft: '',
+  markdownApp: {
+    savedPosts: [],
+    draft: ''
+  },
   questionsApp: {
     questions: questionsArray
   }
@@ -68,7 +70,9 @@ export default function AppReducer(currentState, action) {
   switch (action.type) {
     case 'UPDATE_DRAFT':
       var newState = {
-        draft: action.rawText
+        markdownApp: {
+          draft: action.rawText
+        }
       };
       return Object.assign({}, currentState, newState);
 
