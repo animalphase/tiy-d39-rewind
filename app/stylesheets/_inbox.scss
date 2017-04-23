@@ -186,7 +186,7 @@ html {
   max-width: 120rem;
   margin: 0 auto 0 auto;
   border-radius: 1rem;
-  padding: 4rem 2rem 4rem 2rem;
+  padding: 4rem 3rem 4rem 3rem;
   @include shadow-box-static;
 }
 
@@ -214,6 +214,10 @@ html {
 .markdown-preview-section {
   flex: 1;
   margin-left: 1.5rem;
+
+  * {
+    word-break:break-word;
+  }
 }
 
 

@@ -69,6 +69,8 @@ export default function AppReducer(currentState, action) {
 
   switch (action.type) {
     case 'UPDATE_DRAFT':
+      // var newState = Object.assign({}, currentState);
+      // newState.markdownApp.draft = action.rawText;
       var newState = {
         markdownApp: {
           draft: action.rawText
