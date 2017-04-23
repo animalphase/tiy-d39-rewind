@@ -45,6 +45,7 @@ html {
 
   .page-footer {
     background: $color-dark;
+    color: $color-light;
   }
 
   .content-wrapper {
@@ -121,6 +122,10 @@ html {
     .active {
       font-weight: bold;
       background: $color-light;
+    }
+
+    .page-frame {
+      padding: 0 2rem;
     }
 
     .pagination {
