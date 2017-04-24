@@ -11,7 +11,6 @@ class QuestionsStart extends React.Component {
   }
 
   render() {
-    console.log('questions!');
     return (
       <main className="content-wrapper">
         <Header className="questions-header" username={this.props.username} />
@@ -19,7 +18,13 @@ class QuestionsStart extends React.Component {
           <Nav />
           <section className="page-content">
             <h2>🙋🏻 Hello!</h2>
-            <p>There are <em>{this.props.questionsApp.questions.length}</em> questions.</p>
+            <p>
+              There are
+              {' '}
+              <em>{this.props.questionsApp.questions.length}</em>
+              {' '}
+              questions.
+            </p>
             <button
               onClick={() => this.props.history.push('questions/question/1')}
               type="button"

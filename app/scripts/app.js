@@ -12,6 +12,9 @@ import EnterPost from './components/markdown/enter-post.js';
 import QuestionsStart from './components/questions/questions-start.js';
 import Question from './components/questions/question.js';
 
+import GameView from './components/question-better/game-view.js';
+import LoadingClues from './components/question-better/game-view.js';
+
 export default function app() {
   function classNames(location) {
     let classes = ['page-wrapper'];
@@ -44,6 +47,7 @@ export default function app() {
                   path="/questions/question/:questionNumber"
                   component={Question}
                 />
+                <Route exact path="/question-better" component={GameView} />
                 <Footer />
               </div>
             );

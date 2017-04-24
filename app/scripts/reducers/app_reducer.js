@@ -51,6 +51,8 @@ let questionsArray = [
   }
 ];
 
+const questionCategoryCount = 6;
+
 let initialState = {
   username: 'ripley',
   markdownApp: {
@@ -59,6 +61,11 @@ let initialState = {
   },
   questionsApp: {
     questions: questionsArray
+  },
+  betterApp: {
+    categoryCount: questionCategoryCount,
+    categories: [],
+    loading: true
   }
 };
 
@@ -86,6 +93,35 @@ export default function AppReducer(currentState, action) {
         }
       });
       return newState;
+
+    case 'LOAD_CLUES':
+      return currentState;
+
+    case 'INITIALIZE_CLUES':
+      console.log('INITIALIZING');
+      return currentState;
+
+    case 'ADD_CATEGORY':
+      let updatedCategories = currentState.betterApp.categories.slice();
+      updatedCategories.push(action.category_info);
+
+      // check length to see if we're done loading all categories!
+      var newState = {
+        betterApp: {
+          categoryCount: questionCategoryCount,
+          categories: updatedCategories,
+          loading: updatedCategories.length >=
+            currentState.betterApp.categoryCount
+            ? false
+            : true
+        }
+      };
+
+      return Object.assign({}, currentState, newState);
+
+    default:
+      console.debug(`Unhandled Action: ${action.type}!`);
+      return currentState;
   }
 
   return currentState;

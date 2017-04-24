@@ -3,7 +3,7 @@
 
 ### TIY Week 8, day 39
 
-**⭐️ live on surge: ⭐️**
+**⭐️ live on surge: http://cd-d39.surge.sh/ ⭐️**
 
 ----
 
