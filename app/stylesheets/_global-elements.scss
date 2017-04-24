@@ -8,6 +8,8 @@
 .page-header {
   padding-top: 1.6rem;
   border-bottom: .3rem solid $color-borders;
+  transition: .5s ease all;
+  background: rgba(255,255,255, 0);
 }
 
 .page-heading {
